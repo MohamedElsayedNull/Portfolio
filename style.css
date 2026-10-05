@@ -1,0 +1,914 @@
+:root {
+    --ink: #08111d;
+    --surface: #0d1928;
+    --surface-2: #122236;
+    --line: rgba(185, 220, 229, 0.16);
+    --muted: #a8bac9;
+    --soft: #dce7ed;
+    --accent: #46d5c1;
+    --accent-dim: rgba(70, 213, 193, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    color: var(--soft);
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--ink);
+    background-image:
+        linear-gradient(rgba(136, 177, 197, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 177, 197, 0.045) 1px, transparent 1px),
+        radial-gradient(circle at 78% 8%, rgba(70, 213, 193, 0.09), transparent 25rem);
+    background-size: 34px 34px, 34px 34px, auto;
+}
+
+.mono {
+    font-family: "Space Mono", monospace;
+}
+
+.site-shell {
+    width: 100%;
+    overflow: hidden;
+}
+
+.site-nav {
+    background: rgba(8, 17, 29, 0.87);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-link {
+    color: #c7d7df;
+    font-family: "Space Mono", monospace;
+    font-size: 0.74rem;
+    transition: color 180ms ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link:focus-visible,
+.focus-ring:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.section-anchor {
+    scroll-margin-top: 6rem;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-family: "Space Mono", monospace;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.terminal-line {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.panel {
+    border: 1px solid var(--line);
+    background: rgba(13, 25, 40, 0.86);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.project-card {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    background: linear-gradient(145deg, rgba(18, 34, 54, 0.94), rgba(10, 20, 33, 0.95));
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(70, 213, 193, 0.55);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.tag {
+    border: 1px solid rgba(70, 213, 193, 0.28);
+    background: var(--accent-dim);
+    color: #a7f4e8;
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.accent-button {
+    background: var(--accent);
+    color: #06201f;
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.accent-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.ghost-button {
+    border: 1px solid rgba(185, 220, 229, 0.35);
+    color: #e4f0f4;
+    transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.ghost-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(70, 213, 193, 0.07);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.disabled-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border: 1px solid rgba(185, 220, 229, 0.2);
+    color: #afbec7;
+    background: rgba(185, 220, 229, 0.06);
+}
+
+.skill-card {
+    border-top: 2px solid rgba(70, 213, 193, 0.62);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Styles migrated from index.html */
+html body[data-template-id="__page-root"] {
+    background: rgb(8, 17, 29);
+}
+html [data-template-id="hero-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="hero-name"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+}
+html [data-template-id="hero-title"] {
+    color: rgb(70, 213, 193);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+html [data-template-id="hero-tagline"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.6;
+}
+html [data-template-id="view-projects-button"] {
+    background: rgb(70, 213, 193);
+    color: rgb(6, 32, 31);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="contact-button"] {
+    background: transparent;
+    color: rgb(228, 240, 244);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="cv-button"] {
+    background: transparent;
+    color: rgb(228, 240, 244);
+}
+html [data-template-id="cv-button-text"] {
+    color: rgb(228, 240, 244);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="hero-linkedin"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+html [data-template-id="hero-email"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+html [data-template-id="hero-panel-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="hero-panel-status"] {
+    color: rgb(224, 235, 239);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.8;
+}
+html [data-template-id="about-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="about-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="about-copy"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.75;
+}
+html [data-template-id="focus-panel"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="focus-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="focus-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="focus-copy"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.75;
+}
+html [data-template-id="skills-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="skills-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="skills-intro"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="cybersecurity-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="cybersecurity-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="cybersecurity-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.75;
+}
+html [data-template-id="tools-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="tools-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="tools-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.75;
+}
+html [data-template-id="networking-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="networking-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="networking-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.75;
+}
+html [data-template-id="programming-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="programming-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="programming-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.75;
+}
+html [data-template-id="database-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="database-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="database-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.75;
+}
+html [data-template-id="projects-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="projects-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="projects-intro"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="project-auth-card"] {
+    background: rgb(18, 34, 54);
+}
+html [data-template-id="project-auth-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="project-auth-overview-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-auth-overview"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="project-auth-tech-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-auth-tech"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+html [data-template-id="project-auth-security-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-auth-security"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="auth-tag-php"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="auth-tag-pdo"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="auth-tag-mysql"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="auth-tag-sessions"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="auth-coming-soon"] {
+    background: rgb(32, 48, 64);
+    color: rgb(175, 190, 199);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-sqli-card"] {
+    background: rgb(18, 34, 54);
+}
+html [data-template-id="project-sqli-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="project-sqli-overview-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-sqli-overview"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="project-sqli-tech-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-sqli-tech"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+html [data-template-id="project-sqli-security-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-sqli-security"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="sqli-tag-python"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="sqli-tag-sql"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="sqli-tag-http"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="sqli-coming-soon"] {
+    background: rgb(32, 48, 64);
+    color: rgb(175, 190, 199);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-cafe-card"] {
+    background: rgb(18, 34, 54);
+}
+html [data-template-id="project-cafe-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="project-cafe-overview-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-cafe-overview"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="project-cafe-tech-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-cafe-tech"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+html [data-template-id="project-cafe-security-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-cafe-security"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="cafe-tag-asp"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="cafe-tag-csharp"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="cafe-tag-ef"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="cafe-coming-soon"] {
+    background: rgb(32, 48, 64);
+    color: rgb(175, 190, 199);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-routing-card"] {
+    background: rgb(18, 34, 54);
+}
+html [data-template-id="project-routing-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="project-routing-overview-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-routing-overview"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="project-routing-tech-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-routing-tech"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+html [data-template-id="project-routing-security-label"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="project-routing-security"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="routing-tag-cisco"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="routing-tag-routing"] {
+    background: rgb(18, 60, 58);
+    color: rgb(167, 244, 232);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+}
+html [data-template-id="routing-coming-soon"] {
+    background: rgb(32, 48, 64);
+    color: rgb(175, 190, 199);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="labs-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="labs-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="labs-intro"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="tryhackme-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="tryhackme-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="tryhackme-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="cylab-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="cylab-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="cylab-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="htb-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="htb-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="htb-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="metasploitable-card"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="metasploitable-title"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+}
+html [data-template-id="metasploitable-items"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.7;
+}
+html [data-template-id="labs-note"] {
+    color: rgb(70, 213, 193);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+html [data-template-id="education-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="education-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="education-university"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="education-university-text"] {
+    color: rgb(224, 235, 239);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="education-depi"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="education-depi-text"] {
+    color: rgb(224, 235, 239);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="education-iti"] {
+    background: rgb(13, 25, 40);
+}
+html [data-template-id="education-iti-text"] {
+    color: rgb(224, 235, 239);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="contact-kicker"] {
+    color: rgb(70, 213, 193);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="contact-heading"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+html [data-template-id="contact-copy"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+}
+html [data-template-id="contact-email-button"] {
+    background: rgb(70, 213, 193);
+    color: rgb(6, 32, 31);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="contact-linkedin-button"] {
+    background: transparent;
+    color: rgb(228, 240, 244);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="contact-github-button"] {
+    background: transparent;
+    color: rgb(228, 240, 244);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="footer-name"] {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+}
+html [data-template-id="footer-field"] {
+    color: rgb(168, 186, 201);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+html [data-template-id="footer-github"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="footer-linkedin"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+html [data-template-id="footer-email"] {
+    color: rgb(203, 216, 223);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}

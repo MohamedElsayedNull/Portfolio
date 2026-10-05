@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Elsayed | Cybersecurity Learner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="./config.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-template-id="__page-root">
+    <div class="site-shell">
+      <header class="site-nav sticky top-0 z-50 w-full">
+        <nav
+          class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8"
+          aria-label="Primary navigation"
+        >
+          <a
+            href="#about"
+            class="focus-ring mono text-sm font-bold tracking-tight text-white"
+            >ME<span class="text-[#46d5c1]">.</span></a
+          >
+          <button
+            id="menu-toggle"
+            type="button"
+            class="focus-ring inline-flex items-center justify-center rounded-md border border-slate-600 p-2 text-slate-100 md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only">Toggle navigation menu</span>
+            <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+          </button>
+          <div class="hidden items-center gap-6 md:flex">
+            <a class="nav-link focus-ring" href="#about">About</a>
+            <a class="nav-link focus-ring" href="#skills">Skills</a>
+            <a class="nav-link focus-ring" href="#projects">Projects</a>
+            <a class="nav-link focus-ring" href="#labs">Labs</a>
+            <a class="nav-link focus-ring" href="#education">Education</a>
+            <a class="nav-link focus-ring" href="#contact">Contact</a>
+          </div>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-slate-700/70 px-5 pb-4 md:hidden"
+        >
+          <div class="flex flex-col gap-3 pt-4">
+            <a class="nav-link focus-ring" href="#about">About</a>
+            <a class="nav-link focus-ring" href="#skills">Skills</a>
+            <a class="nav-link focus-ring" href="#projects">Projects</a>
+            <a class="nav-link focus-ring" href="#labs">Labs</a>
+            <a class="nav-link focus-ring" href="#education">Education</a>
+            <a class="nav-link focus-ring" href="#contact">Contact</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section
+          class="mx-auto flex min-h-[calc(100*min(var(--vh,1vh),1vh))] max-w-6xl items-center px-5 py-20 sm:px-8"
+          aria-labelledby="hero-name"
+        >
+          <div
+            class="grid w-full gap-12 lg:grid-cols-[1.4fr_0.6fr] lg:items-end"
+          >
+            <div class="reveal">
+              <p
+                data-template-id="hero-kicker"
+                class="canva-text eyebrow mb-5"
+              >
+                Junior cybersecurity learner
+              </p>
+              <div class="terminal-line">
+                <h1
+                  id="hero-name"
+                  data-template-id="hero-name"
+                  class="canva-text mono mb-5 max-w-3xl font-bold leading-[1.08] tracking-tight text-white"
+                >
+                  Mohamed Elsayed
+                </h1>
+                <p
+                  data-template-id="hero-title"
+                  class="canva-text mono max-w-3xl text-base leading-relaxed text-[#46d5c1] sm:text-lg"
+                >
+                  Aspiring Penetration Tester | Web &amp; Network Security
+                </p>
+              </div>
+              <p
+                data-template-id="hero-tagline"
+                class="canva-text mt-7 max-w-2xl text-lg leading-8 text-slate-300"
+              >
+                Hands-on cybersecurity learner focused on penetration testing,
+                web security, and network security.
+              </p>
+              <div class="mt-9 flex flex-wrap gap-3">
+                <a
+                  data-template-id="view-projects-button"
+                  href="#projects"
+                  class="canva-button accent-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                  >View Projects</a
+                >
+                <a
+                  data-template-id="contact-button"
+                  href="#contact"
+                  class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                  >Contact Me</a
+                >
+                <a
+                  data-template-id="cv-button"
+                  href="/Mohamed-Elsayed-CV.pdf"
+                  class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                >
+                  <span
+                    data-template-id="cv-button-text"
+                    class="canva-text"
+                    >Download CV</span
+                  >
+                  <i
+                    data-lucide="download"
+                    class="h-4 w-4"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a
+                  data-template-id="hero-linkedin"
+                  href="https://linkedin.com/in/mohamed-elsayed-052856414"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="canva-link focus-ring inline-flex items-center gap-2 text-sm text-slate-300 hover:text-[#46d5c1]"
+                  >LinkedIn</a
+                >
+                <a
+                  data-template-id="hero-email"
+                  href="mailto:mohamed.elsayed4.5.2007@gmail.com"
+                  class="canva-link focus-ring inline-flex items-center gap-2 text-sm text-slate-300 hover:text-[#46d5c1]"
+                  >Email</a
+                >
+              </div>
+            </div>
+            <aside
+              class="panel reveal rounded-lg p-6 lg:mb-3"
+              aria-label="Learning profile"
+            >
+              <p
+                data-template-id="hero-panel-label"
+                class="canva-text mono text-xs font-bold uppercase tracking-[0.16em] text-[#46d5c1]"
+              >
+                Current path
+              </p>
+              <div class="my-5 h-px bg-slate-600/60"></div>
+              <p
+                data-template-id="hero-panel-status"
+                class="canva-text mono text-sm leading-7 text-slate-200"
+              >
+                Building practical security knowledge through labs, CTF
+                practice, and small projects.
+              </p>
+              <div class="mt-6 flex items-center gap-3 text-xs text-slate-400">
+                <span class="h-2 w-2 rounded-full bg-[#46d5c1]"></span>
+                <span class="mono">LEARNING_IN_PUBLIC</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+        <section
+          id="about"
+          class="section-anchor border-y border-slate-700/50 bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+        >
+          <div class="mx-auto max-w-6xl">
+            <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+              <div class="reveal">
+                <p
+                  data-template-id="about-kicker"
+                  class="canva-text eyebrow mb-4"
+                >
+                  01 / About
+                </p>
+                <h2
+                  data-template-id="about-heading"
+                  class="canva-text mono font-bold leading-tight text-white"
+                >
+                  Learning security by doing.
+                </h2>
+              </div>
+              <div class="reveal">
+                <p
+                  data-template-id="about-copy"
+                  class="canva-text max-w-3xl text-lg leading-8 text-slate-300"
+                >
+                  Computer Science student at the Faculty of Computers and
+                  Information, Assiut University, expected graduation 2027,
+                  aiming for a career in penetration testing. Currently enrolled
+                  in the Penetration Testing track with the Digital Egypt
+                  Pioneers Initiative (DEPI) since July 2026. Learns by doing
+                  through security labs, CTF platforms, and small projects to
+                  understand how systems work and how security issues are found
+                  and validated.
+                </p>
+              </div>
+            </div>
+            <article
+              data-template-id="focus-panel"
+              class="canva-panel panel reveal mt-12 rounded-lg p-6 sm:p-8"
+            >
+              <p
+                data-template-id="focus-kicker"
+                class="canva-text eyebrow mb-3"
+              >
+                Current Focus
+              </p>
+              <h3
+                data-template-id="focus-heading"
+                class="canva-text mono mb-4 font-bold text-white"
+              >
+                Practical foundations, one lab at a time.
+              </h3>
+              <p
+                data-template-id="focus-copy"
+                class="canva-text max-w-4xl leading-8 text-slate-300"
+              >
+                Mohamed is currently focused on penetration testing, web
+                security, network security, hands-on security labs, CTF
+                practice, and building small projects to understand how systems
+                work and how security issues are found and validated.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          id="skills"
+          class="section-anchor mx-auto max-w-6xl px-5 py-20 sm:px-8"
+        >
+          <div class="reveal mb-10 max-w-2xl">
+            <p
+              data-template-id="skills-kicker"
+              class="canva-text eyebrow mb-4"
+            >
+              02 / Skills
+            </p>
+            <h2
+              data-template-id="skills-heading"
+              class="canva-text mono font-bold leading-tight text-white"
+            >
+              Technical foundations
+            </h2>
+            <p
+              data-template-id="skills-intro"
+              class="canva-text mt-4 leading-7 text-slate-300"
+            >
+              A focused toolkit across security practice, networking,
+              programming, and web systems.
+            </p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article
+              data-template-id="cybersecurity-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6"
+            >
+              <h3
+                data-template-id="cybersecurity-title"
+                class="canva-text mono mb-5 font-bold text-white"
+              >
+                Cybersecurity
+              </h3>
+              <p
+                data-template-id="cybersecurity-items"
+                class="canva-text leading-7 text-slate-300"
+              >
+                Reconnaissance · Network Discovery · Enumeration · Vulnerability
+                Analysis · SQL Injection · Blind SQL Injection · WAF Analysis
+                (OWASP CRS) · Authentication &amp; Session Security
+              </p>
+            </article>
+            <article
+              data-template-id="tools-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6"
+            >
+              <h3
+                data-template-id="tools-title"
+                class="canva-text mono mb-5 font-bold text-white"
+              >
+                Tools
+              </h3>
+              <p
+                data-template-id="tools-items"
+                class="canva-text leading-7 text-slate-300"
+              >
+                Nmap · Burp Suite · Metasploit · Kali Linux · VirtualBox · Cisco
+                Packet Tracer
+              </p>
+            </article>
+            <article
+              data-template-id="networking-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6"
+            >
+              <h3
+                data-template-id="networking-title"
+                class="canva-text mono mb-5 font-bold text-white"
+              >
+                Networking
+              </h3>
+              <p
+                data-template-id="networking-items"
+                class="canva-text leading-7 text-slate-300"
+              >
+                IPv4 · Subnetting · Static Routing · Switching · VLAN · TCP/IP ·
+                DNS · DHCP · NAT
+              </p>
+            </article>
+            <article
+              data-template-id="programming-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6"
+            >
+              <h3
+                data-template-id="programming-title"
+                class="canva-text mono mb-5 font-bold text-white"
+              >
+                Programming
+              </h3>
+              <p
+                data-template-id="programming-items"
+                class="canva-text leading-7 text-slate-300"
+              >
+                Python (Flask) · PHP · SQL · C# / ASP.NET
+              </p>
+            </article>
+            <article
+              data-template-id="database-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6 md:col-span-2 xl:col-span-2"
+            >
+              <h3
+                data-template-id="database-title"
+                class="canva-text mono mb-5 font-bold text-white"
+              >
+                Databases &amp; Web
+              </h3>
+              <p
+                data-template-id="database-items"
+                class="canva-text leading-7 text-slate-300"
+              >
+                MySQL/MariaDB · PDO · XAMPP · phpMyAdmin · Sessions · Cookies ·
+                Role-Based Access Control
+              </p>
+            </article>
+          </div>
+        </section>
+        <section
+          id="projects"
+          class="section-anchor border-y border-slate-700/50 bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+        >
+          <div class="mx-auto max-w-6xl">
+            <div class="reveal mb-10 max-w-2xl">
+              <p
+                data-template-id="projects-kicker"
+                class="canva-text eyebrow mb-4"
+              >
+                03 / Projects
+              </p>
+              <h2
+                data-template-id="projects-heading"
+                class="canva-text mono font-bold leading-tight text-white"
+              >
+                Small projects, practical learning
+              </h2>
+              <p
+                data-template-id="projects-intro"
+                class="canva-text mt-4 leading-7 text-slate-300"
+              >
+                Projects built to explore authentication, web testing, role
+                separation, and network connectivity.
+              </p>
+            </div>
+            <div class="grid gap-5 lg:grid-cols-2">
+              <article
+                data-template-id="project-auth-card"
+                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
+              >
+                <p
+                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
+                >
+                  01 / WEB SECURITY
+                </p>
+                <h3
+                  data-template-id="project-auth-title"
+                  class="canva-text mono mt-4 font-bold leading-snug text-white"
+                >
+                  PHP Authentication &amp; Authorization System
+                </h3>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <p
+                      data-template-id="project-auth-overview-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Overview
+                    </p>
+                    <p
+                      data-template-id="project-auth-overview"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Login with sessions and cookies, Remember Me, role-based
+                      admin access, and CRUD operations.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-auth-tech-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Technologies
+                    </p>
+                    <p
+                      data-template-id="project-auth-tech"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      PHP, PDO, MySQL/MariaDB, Sessions
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-auth-security-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Security Focus
+                    </p>
+                    <p
+                      data-template-id="project-auth-security"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Authentication, authorization, session handling, cookies,
+                      and database-backed access control.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    data-template-id="auth-tag-php"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >PHP</span
+                  >
+                  <span
+                    data-template-id="auth-tag-pdo"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >PDO</span
+                  >
+                  <span
+                    data-template-id="auth-tag-mysql"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >MySQL</span
+                  >
+                  <span
+                    data-template-id="auth-tag-sessions"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >Sessions</span
+                  >
+                </div>
+                <button
+                  data-template-id="auth-coming-soon"
+                  type="button"
+                  disabled=""
+                  aria-disabled="true"
+                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
+                >
+                  GitHub — Coming Soon
+                </button>
+              </article>
+              <article
+                data-template-id="project-sqli-card"
+                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
+              >
+                <p
+                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
+                >
+                  02 / AUTHORIZED LAB
+                </p>
+                <h3
+                  data-template-id="project-sqli-title"
+                  class="canva-text mono mt-4 font-bold leading-snug text-white"
+                >
+                  Blind SQL Injection Automation Lab
+                </h3>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <p
+                      data-template-id="project-sqli-overview-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Overview
+                    </p>
+                    <p
+                      data-template-id="project-sqli-overview"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Python script that automates Blind SQL Injection testing
+                      in an authorized lab environment, including conditional
+                      response analysis and data extraction logic.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-sqli-tech-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Technologies
+                    </p>
+                    <p
+                      data-template-id="project-sqli-tech"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Python, SQL, HTTP
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-sqli-security-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Security Focus
+                    </p>
+                    <p
+                      data-template-id="project-sqli-security"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Blind SQL Injection testing, conditional response
+                      analysis, and authorized lab validation.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    data-template-id="sqli-tag-python"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >Python</span
+                  >
+                  <span
+                    data-template-id="sqli-tag-sql"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >SQL</span
+                  >
+                  <span
+                    data-template-id="sqli-tag-http"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >HTTP</span
+                  >
+                </div>
+                <button
+                  data-template-id="sqli-coming-soon"
+                  type="button"
+                  disabled=""
+                  aria-disabled="true"
+                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
+                >
+                  GitHub — Coming Soon
+                </button>
+              </article>
+              <article
+                data-template-id="project-cafe-card"
+                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
+              >
+                <p
+                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
+                >
+                  03 / ACCESS CONTROL
+                </p>
+                <h3
+                  data-template-id="project-cafe-title"
+                  class="canva-text mono mt-4 font-bold leading-snug text-white"
+                >
+                  H Cafe System
+                </h3>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <p
+                      data-template-id="project-cafe-overview-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Overview
+                    </p>
+                    <p
+                      data-template-id="project-cafe-overview"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Cafe management system with role-based access for Admin,
+                      Supervisor, and Employee.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-cafe-tech-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Technologies
+                    </p>
+                    <p
+                      data-template-id="project-cafe-tech"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      ASP.NET MVC, C#, Entity Framework
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-cafe-security-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Security Focus
+                    </p>
+                    <p
+                      data-template-id="project-cafe-security"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Role-based access control and separating permissions by
+                      user role.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    data-template-id="cafe-tag-asp"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >ASP.NET MVC</span
+                  >
+                  <span
+                    data-template-id="cafe-tag-csharp"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >C#</span
+                  >
+                  <span
+                    data-template-id="cafe-tag-ef"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >Entity Framework</span
+                  >
+                </div>
+                <button
+                  data-template-id="cafe-coming-soon"
+                  type="button"
+                  disabled=""
+                  aria-disabled="true"
+                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
+                >
+                  GitHub — Coming Soon
+                </button>
+              </article>
+              <article
+                data-template-id="project-routing-card"
+                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
+              >
+                <p
+                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
+                >
+                  04 / NETWORK LAB
+                </p>
+                <h3
+                  data-template-id="project-routing-title"
+                  class="canva-text mono mt-4 font-bold leading-snug text-white"
+                >
+                  IPv4 Static Routing Lab
+                </h3>
+                <div class="mt-6 space-y-5">
+                  <div>
+                    <p
+                      data-template-id="project-routing-overview-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Overview
+                    </p>
+                    <p
+                      data-template-id="project-routing-overview"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Two-router topology connecting multiple subnets with
+                      static routes, verified with ICMP ping.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-routing-tech-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Technologies
+                    </p>
+                    <p
+                      data-template-id="project-routing-tech"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      Cisco Packet Tracer, Routing
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      data-template-id="project-routing-security-label"
+                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1]"
+                    >
+                      Security Focus
+                    </p>
+                    <p
+                      data-template-id="project-routing-security"
+                      class="canva-text leading-7 text-slate-300"
+                    >
+                      IPv4 subnet connectivity, static routing, and network
+                      verification.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    data-template-id="routing-tag-cisco"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >Cisco Packet Tracer</span
+                  >
+                  <span
+                    data-template-id="routing-tag-routing"
+                    class="canva-tag tag rounded-full px-3 py-2"
+                    >Routing</span
+                  >
+                </div>
+                <button
+                  data-template-id="routing-coming-soon"
+                  type="button"
+                  disabled=""
+                  aria-disabled="true"
+                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
+                >
+                  GitHub — Coming Soon
+                </button>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section
+          id="labs"
+          class="section-anchor mx-auto max-w-6xl px-5 py-20 sm:px-8"
+        >
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="reveal">
+              <p
+                data-template-id="labs-kicker"
+                class="canva-text eyebrow mb-4"
+              >
+                04 / Labs
+              </p>
+              <h2
+                data-template-id="labs-heading"
+                class="canva-text mono font-bold leading-tight text-white"
+              >
+                Labs &amp; CTF Platforms
+              </h2>
+              <p
+                data-template-id="labs-intro"
+                class="canva-text mt-4 leading-7 text-slate-300"
+              >
+                Practical training environments used to build hands-on security
+                understanding.
+              </p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article
+                data-template-id="tryhackme-card"
+                class="canva-card panel reveal rounded-lg p-5"
+              >
+                <h3
+                  data-template-id="tryhackme-title"
+                  class="canva-text mono mb-3 font-bold text-white"
+                >
+                  TryHackMe
+                </h3>
+                <p
+                  data-template-id="tryhackme-items"
+                  class="canva-text leading-7 text-slate-300"
+                >
+                  Pre-Security, Bounty Hacker, Kenobi, Blue, Vulnversity
+                </p>
+              </article>
+              <article
+                data-template-id="cylab-card"
+                class="canva-card panel reveal rounded-lg p-5"
+              >
+                <h3
+                  data-template-id="cylab-title"
+                  class="canva-text mono mb-3 font-bold text-white"
+                >
+                  CYLAB
+                </h3>
+                <p
+                  data-template-id="cylab-items"
+                  class="canva-text leading-7 text-slate-300"
+                >
+                  Old Sessions, Cookie Monster, WAF Lab-02
+                </p>
+              </article>
+              <article
+                data-template-id="htb-card"
+                class="canva-card panel reveal rounded-lg p-5"
+              >
+                <h3
+                  data-template-id="htb-title"
+                  class="canva-text mono mb-3 font-bold text-white"
+                >
+                  Hack The Box
+                </h3>
+                <p
+                  data-template-id="htb-items"
+                  class="canva-text leading-7 text-slate-300"
+                >
+                  beginner web challenge
+                </p>
+              </article>
+              <article
+                data-template-id="metasploitable-card"
+                class="canva-card panel reveal rounded-lg p-5"
+              >
+                <h3
+                  data-template-id="metasploitable-title"
+                  class="canva-text mono mb-3 font-bold text-white"
+                >
+                  Metasploitable
+                </h3>
+                <p
+                  data-template-id="metasploitable-items"
+                  class="canva-text leading-7 text-slate-300"
+                >
+                  Metasploitable
+                </p>
+              </article>
+            </div>
+          </div>
+          <p
+            data-template-id="labs-note"
+            class="canva-text reveal mt-8 mono text-sm text-[#46d5c1]"
+          >
+            Write-ups coming soon.
+          </p>
+        </section>
+        <section
+          id="education"
+          class="section-anchor border-y border-slate-700/50 bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+        >
+          <div class="mx-auto max-w-6xl">
+            <div class="reveal mb-10 max-w-2xl">
+              <p
+                data-template-id="education-kicker"
+                class="canva-text eyebrow mb-4"
+              >
+                05 / Education
+              </p>
+              <h2
+                data-template-id="education-heading"
+                class="canva-text mono font-bold leading-tight text-white"
+              >
+                Education &amp; Training
+              </h2>
+            </div>
+            <div class="space-y-4">
+              <article
+                data-template-id="education-university"
+                class="canva-card panel reveal rounded-lg p-6"
+              >
+                <p
+                  data-template-id="education-university-text"
+                  class="canva-text leading-7 text-slate-200"
+                >
+                  Faculty of Computers and Information, Assiut University —
+                  Expected graduation 2027
+                </p>
+              </article>
+              <article
+                data-template-id="education-depi"
+                class="canva-card panel reveal rounded-lg p-6"
+              >
+                <p
+                  data-template-id="education-depi-text"
+                  class="canva-text leading-7 text-slate-200"
+                >
+                  Digital Egypt Pioneers Initiative (DEPI) — Penetration Testing
+                  Track (July 2026 – Present, In Progress)
+                </p>
+              </article>
+              <article
+                data-template-id="education-iti"
+                class="canva-card panel reveal rounded-lg p-6"
+              >
+                <p
+                  data-template-id="education-iti-text"
+                  class="canva-text leading-7 text-slate-200"
+                >
+                  ITI Python course, Database course, Cybersecurity Beginner
+                  course
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section
+          id="contact"
+          class="section-anchor mx-auto max-w-6xl px-5 py-20 sm:px-8"
+        >
+          <div class="panel reveal rounded-lg p-7 sm:p-10">
+            <p
+              data-template-id="contact-kicker"
+              class="canva-text eyebrow mb-4"
+            >
+              06 / Contact
+            </p>
+            <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <div>
+                <h2
+                  data-template-id="contact-heading"
+                  class="canva-text mono font-bold leading-tight text-white"
+                >
+                  Let’s connect.
+                </h2>
+                <p
+                  data-template-id="contact-copy"
+                  class="canva-text mt-4 max-w-2xl leading-7 text-slate-300"
+                >
+                  Email Mohamed or connect through LinkedIn and GitHub.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 lg:justify-end">
+                <a
+                  data-template-id="contact-email-button"
+                  href="mailto:mohamed.elsayed4.5.2007@gmail.com"
+                  class="canva-button accent-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                  >Email Mohamed</a
+                >
+                <a
+                  data-template-id="contact-linkedin-button"
+                  href="https://linkedin.com/in/mohamed-elsayed-052856414"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                  >LinkedIn</a
+                >
+                <a
+                  data-template-id="contact-github-button"
+                  href="https://github.com/mohamedelsayed452007-tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="border-t border-slate-700/60 px-5 py-8 sm:px-8">
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div>
+            <p
+              data-template-id="footer-name"
+              class="canva-text mono font-bold text-white"
+            >
+              Mohamed Elsayed
+            </p>
+            <p
+              data-template-id="footer-field"
+              class="canva-text mt-1 text-sm text-slate-400"
+            >
+              Web &amp; Network Security
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-5">
+            <a
+              data-template-id="footer-github"
+              href="https://github.com/mohamedelsayed452007-tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="canva-link focus-ring mono text-xs text-slate-300 hover:text-[#46d5c1]"
+              >GitHub</a
+            >
+            <a
+              data-template-id="footer-linkedin"
+              href="https://linkedin.com/in/mohamed-elsayed-052856414"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="canva-link focus-ring mono text-xs text-slate-300 hover:text-[#46d5c1]"
+              >LinkedIn</a
+            >
+            <a
+              data-template-id="footer-email"
+              href="mailto:mohamed.elsayed4.5.2007@gmail.com"
+              class="canva-link focus-ring mono text-xs text-slate-300 hover:text-[#46d5c1]"
+              >Email</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
