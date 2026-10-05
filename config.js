@@ -5,11 +5,17 @@
     }
 
     const scriptBase = currentScript.src;
-    const scriptsToLoad = [
-        "https://cdn.tailwindcss.com/3.4.17",
-        "https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js",
-        new URL("./main.js", scriptBase).href,
+    const optionalScripts = [
+        {
+            src: "https://cdn.tailwindcss.com/3.4.17",
+            name: "Tailwind CSS",
+        },
+        {
+            src: "https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js",
+            name: "Lucide icons",
+        },
     ];
+    const mainScript = new URL("./main.js", scriptBase).href;
 
     const loadScript = (src) =>
         new Promise((resolve, reject) => {
@@ -22,9 +28,15 @@
         });
 
     const loadDependencies = async () => {
-        for (const src of scriptsToLoad) {
-            await loadScript(src);
+        for (const dependency of optionalScripts) {
+            try {
+                await loadScript(dependency.src);
+            } catch (error) {
+                console.error(`Failed to load ${dependency.name}.`, error);
+            }
         }
+
+        await loadScript(mainScript);
     };
 
     loadDependencies().catch((error) => {

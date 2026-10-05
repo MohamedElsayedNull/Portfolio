@@ -1,5 +1,9 @@
 const initializePage = () => {
-    lucide.createIcons();
+    if (window.lucide) {
+        window.lucide.createIcons();
+    } else {
+        console.error("Lucide icons could not be initialized because the library failed to load.");
+    }
 
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -21,6 +25,8 @@ const initializePage = () => {
         "(prefers-reduced-motion: reduce)",
     ).matches;
     const revealItems = document.querySelectorAll(".reveal");
+
+    document.documentElement.classList.add("js-enabled");
 
     if (reduceMotion || !("IntersectionObserver" in window)) {
         revealItems.forEach((item) => item.classList.add("is-visible"));

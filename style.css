@@ -19,7 +19,12 @@ body {
     margin: 0;
     color: var(--soft);
     font-family: "DM Sans", sans-serif;
-    background: var(--ink);
+    background-color: var(--ink);
+    background-image:
+        linear-gradient(rgba(136, 177, 197, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(136, 177, 197, 0.045) 1px, transparent 1px),
+        radial-gradient(circle at 78% 8%, rgba(70, 213, 193, 0.09), transparent 25rem);
+    background-size: 34px 34px, 34px 34px, auto;
 }
 
 .site-shell {
@@ -299,12 +304,15 @@ body {
 
 /* Reveal animation */
 .reveal {
-    opacity: 0;
-    transform: translateY(18px);
     transition: opacity 600ms ease, transform 600ms ease;
 }
 
-.reveal.is-visible {
+.js-enabled .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.js-enabled .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -324,7 +332,7 @@ body {
         transition-duration: 0.01ms !important;
     }
 
-    .reveal {
+    .js-enabled .reveal {
         opacity: 1;
         transform: none;
     }
