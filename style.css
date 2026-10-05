@@ -9,6 +9,7 @@
     --accent-dim: rgba(70, 213, 193, 0.12);
 }
 
+/* Global styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,16 +19,7 @@ body {
     margin: 0;
     color: var(--soft);
     font-family: "DM Sans", sans-serif;
-    background-color: var(--ink);
-    background-image:
-        linear-gradient(rgba(136, 177, 197, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(136, 177, 197, 0.045) 1px, transparent 1px),
-        radial-gradient(circle at 78% 8%, rgba(70, 213, 193, 0.09), transparent 25rem);
-    background-size: 34px 34px, 34px 34px, auto;
-}
-
-.mono {
-    font-family: "Space Mono", monospace;
+    background: var(--ink);
 }
 
 .site-shell {
@@ -35,6 +27,90 @@ body {
     overflow: hidden;
 }
 
+/* Typography */
+.mono {
+    font-family: "Space Mono", monospace;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-family: "Space Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.panel-label {
+    color: var(--accent);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hero-name {
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hero-title {
+    color: var(--accent);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.hero-tagline {
+    color: #cbd8df;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.section-heading {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.section-copy {
+    color: #cbd8df;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.about-copy {
+    color: #cbd8df;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.focus-copy {
+    color: #cbd8df;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.profile-status {
+    color: #e0ebef;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Navigation and links */
 .site-nav {
     background: rgba(8, 17, 29, 0.87);
     backdrop-filter: blur(14px);
@@ -63,15 +139,7 @@ body {
     scroll-margin-top: 6rem;
 }
 
-.eyebrow {
-    color: var(--accent);
-    font-family: "Space Mono", monospace;
-    font-size: 0.74rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
+/* Components */
 .terminal-line {
     border-left: 2px solid var(--accent);
     padding-left: 1rem;
@@ -83,28 +151,8 @@ body {
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
 }
 
-.project-card {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
-    border: 1px solid var(--line);
-    background: linear-gradient(145deg, rgba(18, 34, 54, 0.94), rgba(10, 20, 33, 0.95));
-    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(70, 213, 193, 0.55);
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-}
-
-.tag {
-    border: 1px solid rgba(70, 213, 193, 0.28);
-    background: var(--accent-dim);
-    color: #a7f4e8;
-    font-family: "Space Mono", monospace;
-    font-size: 0.7rem;
-    line-height: 1;
+.surface-card {
+    background: rgb(13, 25, 40);
 }
 
 .accent-button {
@@ -130,6 +178,126 @@ body {
     background: rgba(70, 213, 193, 0.07);
 }
 
+.button-label {
+    color: #e4f0f4;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.disabled-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border: 1px solid rgba(185, 220, 229, 0.2);
+    color: #afbec7;
+    background: rgb(32, 48, 64);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Skills and learning cards */
+.skill-card {
+    border-top: 2px solid rgba(70, 213, 193, 0.62);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.skill-list {
+    color: #cbd8df;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.card-copy {
+    color: #cbd8df;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Projects */
+.project-card {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    background: rgb(18, 34, 54);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(70, 213, 193, 0.55);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.project-label {
+    color: var(--accent);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-tech {
+    color: #cbd8df;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tag {
+    border: 1px solid rgba(70, 213, 193, 0.28);
+    background: rgb(18, 60, 58);
+    color: #a7f4e8;
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Education and footer */
+.education-copy {
+    color: #e0ebef;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.labs-note {
+    color: var(--accent);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.footer-name {
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.footer-field {
+    color: #a8bac9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Reveal animation */
 .reveal {
     opacity: 0;
     transform: translateY(18px);
@@ -141,18 +309,7 @@ body {
     transform: translateY(0);
 }
 
-.disabled-button {
-    cursor: not-allowed;
-    opacity: 0.5;
-    border: 1px solid rgba(185, 220, 229, 0.2);
-    color: #afbec7;
-    background: rgba(185, 220, 229, 0.06);
-}
-
-.skill-card {
-    border-top: 2px solid rgba(70, 213, 193, 0.62);
-}
-
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -171,744 +328,4 @@ body {
         opacity: 1;
         transform: none;
     }
-}
-
-
-/* Styles migrated from index.html */
-html body[data-template-id="__page-root"] {
-    background: rgb(8, 17, 29);
-}
-html [data-template-id="hero-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="hero-name"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 32px;
-}
-html [data-template-id="hero-title"] {
-    color: rgb(70, 213, 193);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-}
-html [data-template-id="hero-tagline"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1.6;
-}
-html [data-template-id="view-projects-button"] {
-    background: rgb(70, 213, 193);
-    color: rgb(6, 32, 31);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="contact-button"] {
-    background: transparent;
-    color: rgb(228, 240, 244);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="cv-button"] {
-    background: transparent;
-    color: rgb(228, 240, 244);
-}
-html [data-template-id="cv-button-text"] {
-    color: rgb(228, 240, 244);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="hero-linkedin"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-}
-html [data-template-id="hero-email"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-}
-html [data-template-id="hero-panel-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="hero-panel-status"] {
-    color: rgb(224, 235, 239);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.8;
-}
-html [data-template-id="about-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="about-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="about-copy"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1.75;
-}
-html [data-template-id="focus-panel"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="focus-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="focus-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="focus-copy"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.75;
-}
-html [data-template-id="skills-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="skills-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="skills-intro"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="cybersecurity-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="cybersecurity-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="cybersecurity-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.75;
-}
-html [data-template-id="tools-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="tools-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="tools-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.75;
-}
-html [data-template-id="networking-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="networking-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="networking-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.75;
-}
-html [data-template-id="programming-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="programming-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="programming-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.75;
-}
-html [data-template-id="database-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="database-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="database-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.75;
-}
-html [data-template-id="projects-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="projects-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="projects-intro"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="project-auth-card"] {
-    background: rgb(18, 34, 54);
-}
-html [data-template-id="project-auth-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="project-auth-overview-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-auth-overview"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="project-auth-tech-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-auth-tech"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-html [data-template-id="project-auth-security-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-auth-security"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="auth-tag-php"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="auth-tag-pdo"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="auth-tag-mysql"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="auth-tag-sessions"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="auth-coming-soon"] {
-    background: rgb(32, 48, 64);
-    color: rgb(175, 190, 199);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-sqli-card"] {
-    background: rgb(18, 34, 54);
-}
-html [data-template-id="project-sqli-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="project-sqli-overview-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-sqli-overview"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="project-sqli-tech-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-sqli-tech"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-html [data-template-id="project-sqli-security-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-sqli-security"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="sqli-tag-python"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="sqli-tag-sql"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="sqli-tag-http"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="sqli-coming-soon"] {
-    background: rgb(32, 48, 64);
-    color: rgb(175, 190, 199);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-cafe-card"] {
-    background: rgb(18, 34, 54);
-}
-html [data-template-id="project-cafe-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="project-cafe-overview-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-cafe-overview"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="project-cafe-tech-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-cafe-tech"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-html [data-template-id="project-cafe-security-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-cafe-security"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="cafe-tag-asp"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="cafe-tag-csharp"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="cafe-tag-ef"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="cafe-coming-soon"] {
-    background: rgb(32, 48, 64);
-    color: rgb(175, 190, 199);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-routing-card"] {
-    background: rgb(18, 34, 54);
-}
-html [data-template-id="project-routing-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="project-routing-overview-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-routing-overview"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="project-routing-tech-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-routing-tech"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-html [data-template-id="project-routing-security-label"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="project-routing-security"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="routing-tag-cisco"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="routing-tag-routing"] {
-    background: rgb(18, 60, 58);
-    color: rgb(167, 244, 232);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 11px;
-}
-html [data-template-id="routing-coming-soon"] {
-    background: rgb(32, 48, 64);
-    color: rgb(175, 190, 199);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="labs-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="labs-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="labs-intro"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="tryhackme-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="tryhackme-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="tryhackme-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="cylab-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="cylab-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="cylab-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="htb-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="htb-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="htb-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="metasploitable-card"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="metasploitable-title"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 19px;
-}
-html [data-template-id="metasploitable-items"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.7;
-}
-html [data-template-id="labs-note"] {
-    color: rgb(70, 213, 193);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-}
-html [data-template-id="education-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="education-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="education-university"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="education-university-text"] {
-    color: rgb(224, 235, 239);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="education-depi"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="education-depi-text"] {
-    color: rgb(224, 235, 239);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="education-iti"] {
-    background: rgb(13, 25, 40);
-}
-html [data-template-id="education-iti-text"] {
-    color: rgb(224, 235, 239);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="contact-kicker"] {
-    color: rgb(70, 213, 193);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="contact-heading"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-}
-html [data-template-id="contact-copy"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.7;
-}
-html [data-template-id="contact-email-button"] {
-    background: rgb(70, 213, 193);
-    color: rgb(6, 32, 31);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="contact-linkedin-button"] {
-    background: transparent;
-    color: rgb(228, 240, 244);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="contact-github-button"] {
-    background: transparent;
-    color: rgb(228, 240, 244);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="footer-name"] {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-style: normal;
-    font-size: 14px;
-}
-html [data-template-id="footer-field"] {
-    color: rgb(168, 186, 201);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-}
-html [data-template-id="footer-github"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="footer-linkedin"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12px;
-}
-html [data-template-id="footer-email"] {
-    color: rgb(203, 216, 223);
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12px;
 }
