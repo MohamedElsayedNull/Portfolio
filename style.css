@@ -29,7 +29,7 @@ body {
 
 .site-shell {
     width: 100%;
-    overflow: hidden;
+    overflow: clip;
 }
 
 /* Typography */
@@ -142,6 +142,144 @@ body {
 
 .section-anchor {
     scroll-margin-top: 6rem;
+}
+
+.profile-logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+}
+
+.profile-home {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-home-label {
+    transition: opacity 160ms ease;
+}
+
+.profile-home.profile-image-active .profile-home-label {
+    opacity: 0;
+}
+
+.hero-identity {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    margin-bottom: 1.25rem;
+}
+
+.hero-name {
+    margin: 0;
+    font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
+.hero-profile-slot {
+    display: block;
+    width: clamp(5rem, 14vw, 7rem);
+    height: clamp(5rem, 14vw, 7rem);
+    flex: 0 0 auto;
+}
+
+.hero-profile-image {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-logo.is-transitioning {
+    position: fixed;
+    z-index: 100;
+    margin: 0;
+    transition:
+        top 560ms cubic-bezier(0.22, 0.8, 0.26, 1),
+        left 560ms cubic-bezier(0.22, 0.8, 0.26, 1),
+        width 560ms cubic-bezier(0.22, 0.8, 0.26, 1),
+        height 560ms cubic-bezier(0.22, 0.8, 0.26, 1);
+    pointer-events: none;
+    will-change: top, left, width, height;
+}
+
+.hero-terminal {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(185, 220, 229, 0.2);
+    border-radius: 0.75rem;
+    background: #07111d;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+}
+
+.hero-terminal-bar {
+    display: flex;
+    min-height: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.9rem;
+    border-bottom: 1px solid rgba(185, 220, 229, 0.12);
+    background: #0d1928;
+}
+
+.hero-terminal-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hero-terminal-dots span {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: #46d5c1;
+    opacity: 0.72;
+}
+
+.hero-terminal-dots span:nth-child(2) {
+    opacity: 0.48;
+}
+
+.hero-terminal-dots span:nth-child(3) {
+    opacity: 0.3;
+}
+
+.hero-terminal-title {
+    color: #8da2b3;
+    font-family: "Space Mono", monospace;
+    font-size: 0.68rem;
+}
+
+.hero-terminal-body {
+    min-height: 19rem;
+    padding: 1rem;
+    color: #dce7ed;
+    font-family: "Space Mono", monospace;
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.hero-terminal-group + .hero-terminal-group {
+    margin-top: 0.7rem;
+}
+
+.hero-terminal-command,
+.hero-terminal-output {
+    min-height: 1.7em;
+    margin: 0;
+}
+
+.hero-terminal-command {
+    color: #46d5c1;
+}
+
+.hero-terminal-output {
+    color: #8fe3b0;
 }
 
 /* Components */
@@ -272,6 +410,39 @@ body {
     line-height: 1;
 }
 
+/* Certifications */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+}
+
+.certificate-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.certificate-title {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.certificate-button {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
 /* Education and footer */
 .education-copy {
     color: #e0ebef;
@@ -300,6 +471,145 @@ body {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+}
+
+/* Interactive Kali image */
+.kali-section {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+}
+
+.kali-container {
+    position: relative;
+    width: min(100%, 260px);
+}
+
+.kali-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.kali-eye {
+    position: absolute;
+    top: 49.9%;
+    width: 15.5%;
+    height: 4.4%;
+    overflow: hidden;
+    clip-path: polygon(
+        0 51%, 4% 42%, 11% 31%, 21% 21%, 33% 12%, 46% 7%,
+        58% 7%, 70% 12%, 81% 22%, 90% 34%, 97% 45%, 100% 51%,
+        97% 58%, 91% 67%, 82% 76%, 70% 84%, 57% 89%, 44% 90%,
+        31% 86%, 20% 79%, 11% 70%, 4% 60%
+    );
+    pointer-events: none;
+}
+
+.kali-sclera {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(83, 49, 40, 0.36),
+            rgba(116, 70, 56, 0.14) 24%,
+            transparent 47% 72%,
+            rgba(118, 75, 60, 0.22)
+        ),
+        radial-gradient(ellipse at 50% 42%, #e9dfd5 0 38%, #dfd0c3 69%, #b18d7d 100%);
+    box-shadow:
+        inset 0 1px 2px rgba(62, 39, 32, 0.38),
+        inset 0 -1px 1px rgba(255, 247, 236, 0.26);
+}
+
+.kali-eye::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(63, 39, 34, 0.12),
+        transparent 28% 79%,
+        rgba(91, 56, 45, 0.08)
+    );
+    box-shadow: inset 0 1px 1px rgba(62, 39, 32, 0.24);
+    content: "";
+}
+
+.kali-eye-left {
+    left: 28.4%;
+}
+
+.kali-eye-right {
+    left: 57.4%;
+    width: 16.5%;
+}
+
+.kali-iris {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: 34%;
+    aspect-ratio: 1;
+    place-items: center;
+    will-change: transform;
+    border: 1px solid rgba(68, 45, 35, 0.72);
+    border-radius: 50%;
+    background:
+        repeating-conic-gradient(
+            from 12deg,
+            rgba(226, 190, 146, 0.13) 0deg 4deg,
+            rgba(70, 47, 35, 0.12) 6deg 13deg
+        ),
+        radial-gradient(
+            circle at 48% 46%,
+            #684631 0 27%,
+            #8a6243 40%,
+            #a17a55 52%,
+            #79563d 70%,
+            #493429 90%,
+            #34271f 100%
+        );
+    box-shadow: inset 0 0 2px rgba(25, 18, 15, 0.72);
+        transform: translate(
+            calc(-50% + var(--pupil-x, 0px)),
+            calc(-50% + var(--pupil-y, 0px))
+        );
+}
+
+.kali-pupil {
+    position: relative;
+    width: 43%;
+    aspect-ratio: 1;
+    border: 0.5px solid rgba(15, 12, 11, 0.82);
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #211a17, #080707 76%);
+    box-shadow: 0 0 1px rgba(20, 14, 11, 0.8);
+}
+
+.kali-pupil::after {
+    position: absolute;
+    top: 12%;
+    left: 18%;
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(255, 250, 239, 0.95);
+    content: "";
+}
+
+.kali-pupil::before {
+    position: absolute;
+    right: 15%;
+    bottom: 17%;
+    width: 13%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(255, 248, 235, 0.48);
+    content: "";
 }
 
 /* Reveal animation */

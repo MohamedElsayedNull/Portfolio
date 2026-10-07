@@ -19,10 +19,13 @@
           aria-label="Primary navigation"
         >
           <a
+            id="profile-home"
             href="#about"
-            class="focus-ring mono text-sm font-bold tracking-tight text-white"
-            >ME<span class="text-[#46d5c1]">.</span></a
+            class="focus-ring profile-home mono text-sm font-bold tracking-tight text-white"
+            aria-label="Mohamed Elsayed home"
           >
+            <span class="profile-home-label" aria-hidden="true">ME.</span>
+          </a>
           <button
             id="menu-toggle"
             type="button"
@@ -38,6 +41,7 @@
             <a class="nav-link focus-ring" href="#skills">Skills</a>
             <a class="nav-link focus-ring" href="#projects">Projects</a>
             <a class="nav-link focus-ring" href="#labs">Labs</a>
+            <a class="nav-link focus-ring" href="#certifications">Certifications</a>
             <a class="nav-link focus-ring" href="#education">Education</a>
             <a class="nav-link focus-ring" href="#contact">Contact</a>
           </div>
@@ -51,6 +55,7 @@
             <a class="nav-link focus-ring" href="#skills">Skills</a>
             <a class="nav-link focus-ring" href="#projects">Projects</a>
             <a class="nav-link focus-ring" href="#labs">Labs</a>
+            <a class="nav-link focus-ring" href="#certifications">Certifications</a>
             <a class="nav-link focus-ring" href="#education">Education</a>
             <a class="nav-link focus-ring" href="#contact">Contact</a>
           </div>
@@ -69,26 +74,34 @@
                 Junior cybersecurity learner
               </p>
               <div class="terminal-line">
-                <h1
-                  id="hero-name"
-                  data-template-id="hero-name"
-                  class="canva-text mono mb-5 max-w-3xl font-bold leading-[1.08] tracking-tight text-white hero-name"
-                >
-                  Mohamed Elsayed
-                </h1>
+                <div class="hero-identity">
+                  <span class="hero-profile-slot">
+                    <img
+                      src="images/mohamed.jpg"
+                      alt="Profile photo of Mohamed Elsayed"
+                      class="profile-logo hero-profile-image"
+                    />
+                  </span>
+                  <h1
+                    id="hero-name"
+                    data-template-id="hero-name"
+                    class="canva-text mono max-w-3xl font-bold leading-[1.08] tracking-tight text-white hero-name"
+                  >
+                    Mohamed Elsayed
+                  </h1>
+                </div>
                 <p
                   data-template-id="hero-title"
                   class="canva-text mono max-w-3xl text-[#46d5c1] sm:text-lg hero-title"
                 >
-                  Aspiring Penetration Tester | Web &amp; Network Security
+                  Cybersecurity Learner | Web Application Security & Network Security
                 </p>
               </div>
               <p
                 data-template-id="hero-tagline"
                 class="canva-text mt-7 max-w-2xl text-lg text-slate-300 hero-tagline"
               >
-                Hands-on cybersecurity learner focused on penetration testing,
-                web security, and network security.
+                Focused on penetration testing, web application security, and network security.
               </p>
               <div class="mt-9 flex flex-wrap gap-3">
                 <a
@@ -105,17 +118,27 @@
                 >
                 <a
                   data-template-id="cv-button"
-                  href="/Mohamed-Elsayed-CV.pdf"
+                  href="certs/Mohamed_Elsayed_CV_ATS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
                 >
                   <span data-template-id="cv-button-text" class="canva-text button-label"
-                    >Download CV</span
+                    >View CV</span
                   >
                   <i
-                    data-lucide="download"
+                    data-lucide="file-text"
                     class="h-4 w-4"
                     aria-hidden="true"
                   ></i>
+                </a>
+                <a
+                  href="certs/Mohamed_Elsayed_CV_ATS.pdf"
+                  download="Mohamed_Elsayed_CV_ATS.pdf"
+                  class="canva-button ghost-button focus-ring inline-flex items-center gap-2 rounded-md px-5 py-3 mono text-xs font-bold"
+                >
+                  <span class="canva-text button-label">Download CV</span>
+                  <i data-lucide="download" class="h-4 w-4" aria-hidden="true"></i>
                 </a>
               </div>
               <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -136,26 +159,66 @@
               </div>
             </div>
             <aside
-              class="panel reveal rounded-lg p-6 lg:mb-3"
-              aria-label="Learning profile"
+              class="hero-terminal reveal"
+              aria-label="Animated cybersecurity profile terminal"
+              data-hero-terminal
             >
-              <p
-                data-template-id="hero-panel-label"
-                class="canva-text mono text-xs font-bold uppercase tracking-[0.16em] text-[#46d5c1] panel-label"
-              >
-                Current path
-              </p>
-              <div class="my-5 h-px bg-slate-600/60"></div>
-              <p
-                data-template-id="hero-panel-status"
-                class="canva-text mono text-sm text-slate-200 profile-status"
-              >
-                Building practical security knowledge through labs, CTF
-                practice, and small projects.
-              </p>
-              <div class="mt-6 flex items-center gap-3 text-xs text-slate-400">
-                <span class="h-2 w-2 rounded-full bg-[#46d5c1]"></span>
-                <span class="mono">LEARNING_IN_PUBLIC</span>
+              <div class="hero-terminal-bar" aria-hidden="true">
+                <div class="hero-terminal-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span class="hero-terminal-title">profile.sh</span>
+              </div>
+              <div class="hero-terminal-body" aria-hidden="true">
+                <div class="hero-terminal-group" data-terminal-group>
+                  <p class="hero-terminal-command" data-terminal-command>
+                    $ whoami
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                   Mohamed Elsayed
+                  </p>
+                </div>
+                <div class="hero-terminal-group" data-terminal-group>
+                  <p class="hero-terminal-command" data-terminal-command>
+                    $ cat focus_areas.txt
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] Penetration Testing
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] Web Application Security
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] Network Security
+                  </p>
+                </div>
+                <div class="hero-terminal-group" data-terminal-group>
+                  <p class="hero-terminal-command" data-terminal-command>
+                    $ cat platforms.txt
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] TryHackMe
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] CYLAB
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] Hack The Box
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] PortSwigger Web Security Academy
+                  </p>
+                </div>
+                <div class="hero-terminal-group" data-terminal-group>
+                  <p class="hero-terminal-command" data-terminal-command>
+                    $ echo $CURRENT_STATUS
+                  </p>
+                  <p class="hero-terminal-output" data-terminal-output>
+                    [+] Junior Cybersecurity 
+                  </p>
+                </div>
               </div>
             </aside>
           </div>
@@ -337,6 +400,23 @@
                 Role-Based Access Control
               </p>
             </article>
+            <article
+              data-template-id="operating-systems-card"
+              class="canva-card skill-card panel reveal rounded-lg p-6 surface-card"
+            >
+              <h3
+                data-template-id="operating-systems-title"
+                class="canva-text mono mb-5 font-bold text-white card-title"
+              >
+                Operating Systems
+              </h3>
+              <p
+                data-template-id="operating-systems-items"
+                class="canva-text text-slate-300 skill-list"
+              >
+                Kali Linux · Linux · Windows · Basic Active Directory
+              </p>
+            </article>
           </div>
         </section>
         <section
@@ -355,199 +435,16 @@
                 data-template-id="projects-heading"
                 class="canva-text mono font-bold leading-tight text-white section-heading"
               >
-                Small projects, practical learning
+                 projects
               </h2>
               <p
                 data-template-id="projects-intro"
                 class="canva-text mt-4 text-slate-300 section-copy"
               >
-                Projects built to explore authentication, web testing, role
-                separation, and network connectivity.
+                A selection of my main projects.
               </p>
             </div>
             <div class="grid gap-5 lg:grid-cols-2">
-              <article
-                data-template-id="project-auth-card"
-                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
-              >
-                <p
-                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
-                >
-                  01 / WEB SECURITY
-                </p>
-                <h3
-                  data-template-id="project-auth-title"
-                  class="canva-text mono mt-4 font-bold leading-snug text-white card-title"
-                >
-                  PHP Authentication &amp; Authorization System
-                </h3>
-                <div class="mt-6 space-y-5">
-                  <div>
-                    <p
-                      data-template-id="project-auth-overview-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Overview
-                    </p>
-                    <p
-                      data-template-id="project-auth-overview"
-                      class="canva-text text-slate-300 card-copy"
-                    >
-                      Login with sessions and cookies, Remember Me, role-based
-                      admin access, and CRUD operations.
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      data-template-id="project-auth-tech-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Technologies
-                    </p>
-                    <p
-                      data-template-id="project-auth-tech"
-                      class="canva-text leading-7 text-slate-300 project-tech"
-                    >
-                      PHP, PDO, MySQL/MariaDB, Sessions
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      data-template-id="project-auth-security-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Security Focus
-                    </p>
-                    <p
-                      data-template-id="project-auth-security"
-                      class="canva-text text-slate-300 card-copy"
-                    >
-                      Authentication, authorization, session handling, cookies,
-                      and database-backed access control.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-6 flex flex-wrap gap-2">
-                  <span
-                    data-template-id="auth-tag-php"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >PHP</span
-                  >
-                  <span
-                    data-template-id="auth-tag-pdo"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >PDO</span
-                  >
-                  <span
-                    data-template-id="auth-tag-mysql"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >MySQL</span
-                  >
-                  <span
-                    data-template-id="auth-tag-sessions"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >Sessions</span
-                  >
-                </div>
-                <button
-                  data-template-id="auth-coming-soon"
-                  type="button"
-                  disabled=""
-                  aria-disabled="true"
-                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
-                >
-                  GitHub — Coming Soon
-                </button>
-              </article>
-              <article
-                data-template-id="project-sqli-card"
-                class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
-              >
-                <p
-                  class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
-                >
-                  02 / AUTHORIZED LAB
-                </p>
-                <h3
-                  data-template-id="project-sqli-title"
-                  class="canva-text mono mt-4 font-bold leading-snug text-white card-title"
-                >
-                  Blind SQL Injection Automation Lab
-                </h3>
-                <div class="mt-6 space-y-5">
-                  <div>
-                    <p
-                      data-template-id="project-sqli-overview-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Overview
-                    </p>
-                    <p
-                      data-template-id="project-sqli-overview"
-                      class="canva-text text-slate-300 card-copy"
-                    >
-                      Python script that automates Blind SQL Injection testing
-                      in an authorized lab environment, including conditional
-                      response analysis and data extraction logic.
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      data-template-id="project-sqli-tech-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Technologies
-                    </p>
-                    <p
-                      data-template-id="project-sqli-tech"
-                      class="canva-text leading-7 text-slate-300 project-tech"
-                    >
-                      Python, SQL, HTTP
-                    </p>
-                  </div>
-                  <div>
-                    <p
-                      data-template-id="project-sqli-security-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Security Focus
-                    </p>
-                    <p
-                      data-template-id="project-sqli-security"
-                      class="canva-text text-slate-300 card-copy"
-                    >
-                      Blind SQL Injection testing, conditional response
-                      analysis, and authorized lab validation.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-6 flex flex-wrap gap-2">
-                  <span
-                    data-template-id="sqli-tag-python"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >Python</span
-                  >
-                  <span
-                    data-template-id="sqli-tag-sql"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >SQL</span
-                  >
-                  <span
-                    data-template-id="sqli-tag-http"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >HTTP</span
-                  >
-                </div>
-                <button
-                  data-template-id="sqli-coming-soon"
-                  type="button"
-                  disabled=""
-                  aria-disabled="true"
-                  class="canva-button disabled-button mt-7 rounded-md px-4 py-3 mono text-xs font-bold"
-                >
-                  GitHub — Coming Soon
-                </button>
-              </article>
               <article
                 data-template-id="project-cafe-card"
                 class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
@@ -555,7 +452,7 @@
                 <p
                   class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
                 >
-                  03 / ACCESS CONTROL
+                  01 / ACCESS CONTROL
                 </p>
                 <h3
                   data-template-id="project-cafe-title"
@@ -637,80 +534,52 @@
                 </button>
               </article>
               <article
-                data-template-id="project-routing-card"
+                data-template-id="project-reconflow-card"
                 class="canva-card project-card reveal rounded-lg p-6 sm:p-7"
               >
                 <p
                   class="mono text-xs font-bold tracking-widest text-[#46d5c1]"
                 >
-                  04 / NETWORK LAB
+                  02 / GRADUATION PROJECT
                 </p>
                 <h3
-                  data-template-id="project-routing-title"
+                  data-template-id="project-reconflow-title"
                   class="canva-text mono mt-4 font-bold leading-snug text-white card-title"
                 >
-                  IPv4 Static Routing Lab
+                  ReconFlow
                 </h3>
                 <div class="mt-6 space-y-5">
                   <div>
                     <p
-                      data-template-id="project-routing-overview-label"
+                      data-template-id="project-reconflow-overview-label"
                       class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
                     >
                       Overview
                     </p>
                     <p
-                      data-template-id="project-routing-overview"
+                      data-template-id="project-reconflow-overview"
                       class="canva-text text-slate-300 card-copy"
                     >
-                      Two-router topology connecting multiple subnets with
-                      static routes, verified with ICMP ping.
+                      Graduation project developed using Python and Flask.
                     </p>
                   </div>
                   <div>
                     <p
-                      data-template-id="project-routing-tech-label"
+                      data-template-id="project-reconflow-tech-label"
                       class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
                     >
                       Technologies
                     </p>
                     <p
-                      data-template-id="project-routing-tech"
+                      data-template-id="project-reconflow-tech"
                       class="canva-text leading-7 text-slate-300 project-tech"
                     >
-                      Cisco Packet Tracer, Routing
+                      Python · Flask
                     </p>
                   </div>
-                  <div>
-                    <p
-                      data-template-id="project-routing-security-label"
-                      class="canva-text mono mb-2 text-xs font-bold uppercase tracking-wider text-[#46d5c1] project-label"
-                    >
-                      Security Focus
-                    </p>
-                    <p
-                      data-template-id="project-routing-security"
-                      class="canva-text text-slate-300 card-copy"
-                    >
-                      IPv4 subnet connectivity, static routing, and network
-                      verification.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-6 flex flex-wrap gap-2">
-                  <span
-                    data-template-id="routing-tag-cisco"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >Cisco Packet Tracer</span
-                  >
-                  <span
-                    data-template-id="routing-tag-routing"
-                    class="canva-tag tag rounded-full px-3 py-2"
-                    >Routing</span
-                  >
                 </div>
                 <button
-                  data-template-id="routing-coming-soon"
+                  data-template-id="reconflow-coming-soon"
                   type="button"
                   disabled=""
                   aria-disabled="true"
@@ -752,16 +621,10 @@
               >
                 <h3
                   data-template-id="tryhackme-title"
-                  class="canva-text mono mb-3 font-bold text-white card-title"
+                  class="canva-text mono font-bold text-white card-title"
                 >
                   TryHackMe
                 </h3>
-                <p
-                  data-template-id="tryhackme-items"
-                  class="canva-text text-slate-300 card-copy"
-                >
-                  Pre-Security, Bounty Hacker, Kenobi, Blue, Vulnversity
-                </p>
               </article>
               <article
                 data-template-id="cylab-card"
@@ -769,16 +632,10 @@
               >
                 <h3
                   data-template-id="cylab-title"
-                  class="canva-text mono mb-3 font-bold text-white card-title"
+                  class="canva-text mono font-bold text-white card-title"
                 >
                   CYLAB
                 </h3>
-                <p
-                  data-template-id="cylab-items"
-                  class="canva-text text-slate-300 card-copy"
-                >
-                  Old Sessions, Cookie Monster, WAF Lab-02
-                </p>
               </article>
               <article
                 data-template-id="htb-card"
@@ -786,16 +643,10 @@
               >
                 <h3
                   data-template-id="htb-title"
-                  class="canva-text mono mb-3 font-bold text-white card-title"
+                  class="canva-text mono font-bold text-white card-title"
                 >
                   Hack The Box
                 </h3>
-                <p
-                  data-template-id="htb-items"
-                  class="canva-text text-slate-300 card-copy"
-                >
-                  beginner web challenge
-                </p>
               </article>
               <article
                 data-template-id="metasploitable-card"
@@ -803,15 +654,26 @@
               >
                 <h3
                   data-template-id="metasploitable-title"
-                  class="canva-text mono mb-3 font-bold text-white card-title"
+                  class="canva-text mono font-bold text-white card-title"
                 >
                   Metasploitable
                 </h3>
+              </article>
+              <article
+                data-template-id="portswigger-card"
+                class="canva-card panel reveal rounded-lg p-5 surface-card"
+              >
+                <h3
+                  data-template-id="portswigger-title"
+                  class="canva-text mono mb-3 font-bold text-white card-title"
+                >
+                  PortSwigger Web Security Academy
+                </h3>
                 <p
-                  data-template-id="metasploitable-items"
+                  data-template-id="portswigger-topics"
                   class="canva-text text-slate-300 card-copy"
                 >
-                  Metasploitable
+                  SQL Injection &#183; XSS &#183; File Upload &#183; Path Traversal
                 </p>
               </article>
             </div>
@@ -824,47 +686,131 @@
           </p>
         </section>
         <section
-          id="education"
-          class="section-anchor border-y border-slate-700/50 bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+          id="certifications"
+          class="certifications section-anchor mx-auto max-w-6xl px-5 py-20 sm:px-8"
+          aria-labelledby="certifications-heading"
+        >
+          <div class="certificate-heading-wrap reveal mb-10 max-w-2xl">
+            <h2
+              id="certifications-heading"
+              class="mono font-bold leading-tight text-white section-heading"
+            >
+              Certifications
+            </h2>
+          </div>
+          <div class="certificate-grid">
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Introduction to network security</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Attendance_Certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Ethical Hacking</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Course_Certificate_En%20%281%29.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Computer Network Fundamentals</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Course_Certificate_En%20%282%29.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Database Fundamentals</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Course_Certificate_En%20%283%29.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Implementation of Computer Network Fundamentals</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Course_Certificate_En%20%284%29.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Introduction to Cybersecurity</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/Introduction_to_Cybersecurity_certificate_mohamed-elsayed1296-compit-aun-edu-eg_237a998a-5499-482b-816f-ab0b151d06cf.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">Red Hat System Administration I</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/___.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+            <article class="certificate-card panel reveal rounded-lg p-6">
+              <h3 class="certificate-title">cyberSecueity Beginnar</h3>
+              <a
+                class="certificate-button ghost-button focus-ring mono rounded-md text-xs font-bold"
+                href="certs/cyberSecueity%20Beginnar.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Certificate</a
+              >
+            </article>
+          </div>
+        </section>
+        <section
+          id="training"
+          class="section-anchor bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+          aria-labelledby="training-heading"
         >
           <div class="mx-auto max-w-6xl">
             <div class="reveal mb-10 max-w-2xl">
-              <p
-                data-template-id="education-kicker"
-                class="canva-text eyebrow mb-4"
-              >
-                05 / Education
-              </p>
               <h2
-                data-template-id="education-heading"
+                id="training-heading"
                 class="canva-text mono font-bold leading-tight text-white section-heading"
               >
-                Education &amp; Training
+                Training
               </h2>
             </div>
             <div class="space-y-4">
-              <article
-                data-template-id="education-university"
-                class="canva-card panel reveal rounded-lg p-6 surface-card"
-              >
-                <p
-                  data-template-id="education-university-text"
-                  class="canva-text text-slate-200 education-copy"
-                >
-                  Faculty of Computers and Information, Assiut University —
-                  Expected graduation 2027
-                </p>
-              </article>
               <article
                 data-template-id="education-depi"
                 class="canva-card panel reveal rounded-lg p-6 surface-card"
               >
                 <p
                   data-template-id="education-depi-text"
-                  class="canva-text text-slate-200 education-copy"
+                  class="canva-text text-slate-200 education-copy font-bold"
                 >
-                  Digital Egypt Pioneers Initiative (DEPI) — Penetration Testing
-                  Track (July 2026 – Present, In Progress)
+                  Digital Egypt Pioneers Initiative (DEPI)
+                </p>
+                <p class="mt-2 text-slate-300 education-copy">
+                  Cybersecurity Track
+                </p>
+                <p class="mt-2 text-slate-400 education-copy">
+                  Penetration Testing — July 2026 – Present, In Progress
                 </p>
               </article>
               <article
@@ -873,11 +819,44 @@
               >
                 <p
                   data-template-id="education-iti-text"
-                  class="canva-text text-slate-200 education-copy"
+                  class="canva-text text-slate-200 education-copy font-bold"
                 >
-                  ITI Python course, Database course, Cybersecurity Beginner
-                  course
+                  ITI
                 </p>
+                <p class="mt-2 text-slate-300 education-copy">
+                  Python course, Database course, Cybersecurity Beginner course
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section
+          id="education"
+          class="section-anchor border-y border-slate-700/50 bg-[#0b1624]/85 px-5 py-20 sm:px-8"
+          aria-labelledby="education-heading"
+        >
+          <div class="mx-auto max-w-6xl">
+            <div class="reveal mb-10 max-w-2xl">
+              <p class="canva-text eyebrow mb-4">05 / Education</p>
+              <h2
+                id="education-heading"
+                class="canva-text mono font-bold leading-tight text-white section-heading"
+              >
+                Education
+              </h2>
+            </div>
+            <div class="space-y-4">
+              <article
+                data-template-id="education-university"
+                class="canva-card panel reveal rounded-lg p-6 surface-card"
+              >
+                <p class="canva-text text-slate-200 education-copy font-bold">
+                  Assiut University
+                </p>
+                <p class="mt-2 text-slate-300 education-copy">
+                  Faculty of Computers and Information
+                </p>
+                <p class="mt-2 text-slate-400 education-copy">GPA: 3.1 / 4.0</p>
               </article>
             </div>
           </div>
@@ -936,6 +915,29 @@
           </div>
         </section>
       </main>
+      <section class="kali-section" aria-label="Interactive Kali avatar">
+        <div class="kali-container">
+          <img
+            class="kali-image"
+            src="images/kali.png"
+            alt="Kali avatar"
+          />
+          <span class="kali-eye kali-eye-left" aria-hidden="true">
+            <span class="kali-sclera">
+              <span class="kali-iris">
+                <span class="kali-pupil"></span>
+              </span>
+            </span>
+          </span>
+          <span class="kali-eye kali-eye-right" aria-hidden="true">
+            <span class="kali-sclera">
+              <span class="kali-iris">
+                <span class="kali-pupil"></span>
+              </span>
+            </span>
+          </span>
+        </div>
+      </section>
       <footer class="border-t border-slate-700/60 px-5 py-8 sm:px-8">
         <div
           class="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
